@@ -3,8 +3,11 @@ const scrollContainer = document.getElementById('scroll-container');
 scrollContainer.innerHTML = `
 <div id="scroll-animation">
   <canvas id="scroll-canvas" width="2501" height="2501"></canvas>
+  <svg height="5" width="300">
+    <line x1="0" x2="300" y1="0" y2="0" style="stroke:rgba(30,29,28,1);stroke-width:2"></line>
+  </svg>
   <a href="/services" target="_self" class="sie-content-3_view-1_0 work-with-us-link" data-sid="content-3_view-1_0">
-    <p class="sie-content-3_view-1_0-text st-m-subheading st-d-subheading">work with us</p>
+    <p class="sie-content-3_view-1_0-text st-m-subheading st-d-subheading work-with-us-link">work with us</p>
   </a>
 </div>
 `;

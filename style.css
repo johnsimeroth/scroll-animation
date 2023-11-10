@@ -21,7 +21,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  z-index: 2000;
 }
 
 #scroll-animation {
@@ -32,16 +31,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 2000;
 }
 
 #scroll-canvas {
   max-height: 80vh;
   max-width: 100vw;
-  z-index: 2000;
+}
+
+.work-with-us-link{
+  pointer-events: auto;
 }
 
 .work-with-us-link:hover {
   color: rgba(183,200,206,1);
-  z-index: 20000;
 }
