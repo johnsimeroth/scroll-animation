@@ -17,7 +17,7 @@
 #scroll-container {
   height: 500vh;
   width: 100vw;
-  background-color: #B35C34;
+  background-color: rgba(179,92,52,1);
   position: relative;
   display: flex;
   justify-content: center;
@@ -44,4 +44,10 @@
 
 .work-with-us-link:hover {
   color: rgba(183,200,206,1);
+}
+
+a.work-with-us-link {
+  border-top-color: rgba(30,29,28,1);
+  border-top-width: 2px;
+  border-top-style: solid;
 }
