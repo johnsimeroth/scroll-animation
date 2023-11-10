@@ -24,15 +24,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-}
-
-#work-with-me-link {
-  /* position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 200000; */
 }
 
 #scroll-canvas {
