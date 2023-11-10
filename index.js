@@ -26,7 +26,7 @@ scrollContainer.innerHTML = `
 const canvas = document.getElementById('scroll-canvas');
 const context = canvas.getContext('2d');
 const frameCount = 3;
-let frameIndex = 1;
+let frameIndex = 0;
 
 const imageSrcs = [
   'https://static.showit.co/file/a_r6CEEBTAW0tFb6PkNLgw/210670/scrollanimation1.png',
@@ -34,18 +34,14 @@ const imageSrcs = [
   'https://static.showit.co/file/ycqBORKCQu6YO9tFD6nyZw/210670/scrollanimation3.png',
 ];
 
-function getCurrentImageSrc(index) {
-  return imageSrcs[index - 1];
-}
-
 const img = new Image();
 img.onload = () => {
   context.drawImage(img, 0, 0);
 };
-img.src = getCurrentImageSrc(frameIndex);
+img.src = imageSrcs[frameIndex];
 
 function updateImage(index) {
-  img.src = getCurrentImageSrc(index);
+  img.src = imageSrcs[index];
   context.drawImage(img, 0, 0);
 }
 
@@ -54,12 +50,8 @@ window.addEventListener('scroll', () => {
   const rect = scrollContainer.getBoundingClientRect();
   const startTop = rect.top + scrollTop + 150;
   const endTop = rect.bottom + scrollTop - window.innerHeight - 400;
-  if (scrollTop < startTop) frameIndex = 1;
-  else if (scrollTop >= endTop) frameIndex = frameCount;
-  else {
-    rawIndex =
-      ((frameCount - 1) / (endTop - startTop)) * (scrollTop - startTop);
-    frameIndex = Math.floor(rawIndex) + 1;
-  }
+  if (scrollTop < startTop) frameIndex = 0;
+  else if (scrollTop >= endTop) frameIndex = frameCount - 1;
+  else frameIndex = Math.floor(((frameCount - 1) / (endTop - startTop)) * (scrollTop - startTop));
   requestAnimationFrame(() => updateImage(frameIndex));
 });
