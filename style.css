@@ -9,15 +9,33 @@
 
 #scroll-container {
   height: 300vh;
+  width: 100vw;
   background: grey;
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-canvas {
+#scroll-animation {
   position: sticky;
   top: 0;
   max-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+#work-with-me-link {
+  /* position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200000; */
+}
+
+#scroll-canvas {
+  max-height: 80vh;
   max-width: 100vw;
 }
