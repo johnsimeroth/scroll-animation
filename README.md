@@ -1,4 +1,4 @@
-**The images in the assets folder are copyright protected and are not to be reproduced or distributed without the express permission of the Workshop Blue**.
+**The images in the assets folder are copyright protected and are not to be reproduced or distributed without the express written permission of Workshop Blue**.
 
 # scroll-animation
 Flip-book style image animation based on scroll position
