@@ -48,6 +48,8 @@
 
 a.work-with-us-link {
   border-top-color: rgba(30,29,28,1);
-  border-top-width: 2px;
+  border-top-width: 1px;
   border-top-style: solid;
+  padding-top: 10px;
+  padding-inline: 5px;
 }
